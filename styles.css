@@ -1,0 +1,160 @@
+:root {
+--light-bone: hsl(30, 54%, 90%);
+--bone: hsl(30, 18%, 87%);
+--light-brown: hsl(30, 10%, 34%);
+--dark-brown: hsl(24, 5%, 18%);
+
+--terracota: hsl(14, 45%, 36%);
+
+--hot-rose: hsl(332, 51%, 32%);
+--baby-rose: hsl(330, 100%, 98%);
+--attribution-blue: hsl(228, 45%, 44%);
+
+--ff-main:'Outfit',sans-serif;
+--ff-headings:'Young Serif',serif;
+--fs-main:1rem;
+--fs-headings: 1.75rem;
+--fw-400: 400;
+--fw-600: 600;
+--fw-700: 700;
+--fw-800: 800;
+}
+
+*, *::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.body{
+font-family: var(--ff-main);
+font-weight: var(--fw-400);
+font-style: var(--fs-main);
+line-height: 1.5;
+color: var(--dark-brown);
+}
+
+.wrapper{
+display: grid;
+place-items: center;
+background-color:var(--light-bone)
+}
+
+.recipe-container{
+max-width: 50em;
+background:white;
+padding: 1.75rem;
+margin: 6rem 0;
+border-radius: 1.5rem;
+}
+
+img{
+display: block;
+max-width: 100%;
+font-style: italic;
+color: var(--hot-rose);
+border-radius: 1rem;
+margin-bottom: 2rem;
+}
+
+.recipe-title{
+font-size: 2.75rem;
+color:var(--dark-brown);
+}
+
+h1,h2{
+line-height: 1.2;
+font-family: var(--ff-headings);
+font-size: var(--fs-headings);
+font-weight: var(--fw-600);
+color: var(--terracota);
+margin-bottom: .5rem;
+margin-top: 1.5rem;
+}
+
+h3{
+font-size: 1.5rem;
+font-weight: var(--fw-600);
+color: var(--hot-rose);
+margin-bottom: 1.5rem;
+margin-top: 1.5rem;
+}
+
+span{
+font-weight: var(--fw-700);
+color: var(--dark-brown);
+} 
+
+[data-cell ="nutrient-value"]{
+color:var(--terracota);
+font-weight:var(--fw-600);
+}
+
+
+li {
+padding-left: 1rem;
+margin-bottom: .75rem;
+}
+
+li::marker {
+color:var(--terracota);
+font-weight: var(--fw-600);
+}
+
+ul, ol{
+padding: 0 1rem;
+}
+
+hr{
+outline: none;
+border:none;
+height: 1px;
+background: var(--light-brown);
+}
+
+
+.preparation-container{
+background: var(--baby-rose);
+border-radius: 1rem;
+padding: 0.5rem 1rem;
+margin-top: 2rem;
+}
+
+table{
+border-collapse: collapse;
+width: 100%;
+}
+
+tr{
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+padding: 1rem;
+border-bottom: 1px solid var(--light-brown);
+
+}
+
+
+@media (max-width:600px){
+.recipe-container{
+margin: 0;
+border-radius: 0;
+padding: 0;
+}
+
+img{
+border-radius: 0;
+
+}
+
+.recipe-container{
+padding: 0 1.5rem;
+}
+}
+
+
+.attribution 
+{ font-size: 11px; text-align: center; 
+  color: var(--attribution-blue);
+  margin-bottom: 2rem;
+}
